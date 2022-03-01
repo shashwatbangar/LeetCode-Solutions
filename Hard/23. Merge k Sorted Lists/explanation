@@ -1,0 +1,16 @@
+Question explanation
+Question says we are given some linkedLists and we need to merge all linked lists into one and return that singular linked list.
+
+Solution approach
+We simply cannot loop over this multi dimensional linkedList and make them singular
+Because as we know linkedList does not work like Array, if we loop over linkedList once we cannot go back
+So easiest way to do this is by looping over every linkedList & put every element of that into an array
+So now we have each element of linkedList in our array.
+Now we sort array in descending order
+WHY?
+Because now when we will create new singular linkedList we we simply keep poping elements one by one from array
+We could have did array.unshift() so we don't need to sort the array but as you know unshift method takes O(n) Time Complexity
+So for each element we would do n and n and n so it will be very costly
+So now We simply create a new linkedList by creating a new Node
+While there are elements in array, keep linking elements of array into linkedList like node.next = array.pop();
+And done we have our result, return this new desired linkedList.
