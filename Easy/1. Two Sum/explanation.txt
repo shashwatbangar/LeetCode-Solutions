@@ -1,0 +1,26 @@
+Question Explanation
+1. So question says you're given an array and you need to find any two numbers from it which will result to target.
+
+Solution approach
+1. Initial thought that comes in mind is that simply loop twice(nested) over array and find two elements which will result to target.
+2. This can go like for first loop from first element of array till 2nd last element and inside this another loop from 2nd element of array till last
+3. Both loop will loop over array over and over to see if there are any two desired elements.
+4. This solution will result to N square Time Complexity as we have two nested loops which are looping over full array (N is length of array).
+5. Space Complexity will be constant or O(1) as we not using any extra space or Data Structure.
+
+Solution approach
+1. Another way we can do it to reduce time complexity is to use a map.
+2. What we will do is store key value pair of array elements and their index inside map where key will be element and value will be index.
+3. So we will start looping over array and find the compliment of current number.
+4. Compliment is (target - currentNum).
+5. So if there is any compliment number in our map that mean we got our two numbers that will result to target so we will simply return them.
+6. Time Complexity will be O(n) as we are looping over array only once.
+7. Space Complexity will be O(n) because we are using external data structure HashMap to store elements of array.
+
+How we got to this point that we will use a HashMap?
+1. We wanted ro reduce the time complexity but we wanted two numbers that will result to target.
+2. We cannot do this with single loop without using some external data structure because in one loop we can only select oe element at a time.
+3. So we used a HashMap to store indices and values of array into HashMap.
+4. By this we when we will loop over array we can simply find if compliment element exist in Map or not becuase map got array values so if its in Map, it will be in Array.
+
+
