@@ -1,3 +1,5 @@
+# Problem Statement: https://leetcode.com/problems/two-sum/
+
 // Time Complexity = O(n^2)
 // Space Complexity = O(1)
 
@@ -25,3 +27,5 @@ var twoSum = function(nums, target) {
         }
     }
 };
+
+# Post: https://leetcode.com/problems/two-sum/discuss/1368011/Javascript-O(n)-solution
