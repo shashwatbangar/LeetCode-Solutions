@@ -18,7 +18,8 @@ Solution approach
 7. Space Complexity will be O(n) because we are using external data structure HashMap to store elements of array.
 
 How we got to this point that we will use a HashMap?
-1. We wanted ro reduce the time complexity but we wanted two numbers that will result to target.
+We wanted something in which we can store index and elements of array so we can use it while finding compliment
+1. We wanted to reduce the time complexity but we wanted two numbers that will result to target.
 2. We cannot do this with single loop without using some external data structure because in one loop we can only select oe element at a time.
 3. So we used a HashMap to store indices and values of array into HashMap.
 4. By this we when we will loop over array we can simply find if compliment element exist in Map or not becuase map got array values so if its in Map, it will be in Array.
