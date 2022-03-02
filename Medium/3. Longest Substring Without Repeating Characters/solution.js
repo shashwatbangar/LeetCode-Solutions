@@ -1,3 +1,6 @@
+// Time Complexity - O(n)
+// Space Complexity - O(n)
+
 var lengthOfLongestSubstring = function(s) {
     let left = 0
     let right = 0
