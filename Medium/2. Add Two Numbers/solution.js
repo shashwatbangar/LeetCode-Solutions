@@ -1,3 +1,8 @@
+// Problem Statement: https://leetcode.com/problems/add-two-numbers/
+
+// Time Complexity = O(n)
+// Space Complexity = O(1)
+
 var addTwoNumbers = function(l1, l2) {
     let newNode = new ListNode(0);
     let head = newNode;
@@ -20,3 +25,5 @@ var addTwoNumbers = function(l1, l2) {
     }
     return newNode.next;
 };
+
+// Post: https://leetcode.com/problems/add-two-numbers/discuss/1343361/JavaScript-Fast-Detail-explanation-Clean-Code-Solution
