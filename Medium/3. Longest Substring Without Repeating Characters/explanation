@@ -1,0 +1,50 @@
+Question Explaination
+Alright question says find the longest substring without repeating the characters.
+This means we want to find a longest substring(part of string) whose all characters are unique
+Suppose string is aangeaivafeg, so longest substring without repeating characters is ngeaiv.
+
+Solution Approach
+So we want every character to be unique, what does that hints?
+If we want some numbers or character or anything unique, which data structure do we use?
+Yes, HashSets, HashSets allow us to store unique elements & that's what we're gonna use in this question.
+
+So it is clear now we will use Set but how we will loop over string?
+We want to find longest length so this is sure that we cannot do that with a single for loop
+Because with single for loop it will have access to one char at a time.
+But if we use two nested for loops time complexity will be O(n^2).
+So what if we use two pointers approach?
+At start both pointer will be at 0th index.
+secondPointer will keep moving forward and at ever step we will add current char to set.
+If set not contains our current char that means we are on another unique char.
+If this is the case we will simply find current length by doing secondPointer - firstPointer & inceasing the secondPointer.
+But if we are on a character which is already in set that means we need to delete this char from our set because then only we will have all unique chars.
+And if we are deleting char from set we will increase firstPointer
+WHY?
+Lets take an example
+
+aangeaivafeg
+Consider a variable maxLenthTillNow which will store our result
+At start 1p & 2p are on 0th index
+Step1. Nothing in set. Add "a". find if current length (2p - 1p > maxLengthTillNow) and move 2p. 
+Step2. Set already has "a". Delete "a" from set and move 1p
+       Because we want all unique chars.
+Step3. 2p is still on "a", a not in set, add "a", find if current length (2p - 1p > maxLengthTillNow) and move 2p.
+Step4. "n" not in set, add "n" in set, find if current length (2p - 1p > maxLengthTillNow) and move 2p.
+Step5. "g" not in set, add "g" in set, find if current length (2p - 1p > maxLengthTillNow) and move 2p.
+Step6. "e" not in set, add "e" in set, find if current length (2p - 1p > maxLengthTillNow) and move 2p.
+Step7. "a" is in the set, delete "a" and move 1p.
+Step8. 2p is still on "a", a not in set, add "a", find if current length (2p - 1p > maxLengthTillNow) and move 2p.
+.
+.
+.
+.
+.
+.
+.
+And after 2p will reach end of string like this we will have oru desired result.
+
+Time Complexity will be O(n) as we are looping over array only once.
+Space Complexity will be O(n) as we are using external data structure Set to store our chars.
+
+
+
