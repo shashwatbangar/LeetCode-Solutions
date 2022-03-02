@@ -1,3 +1,5 @@
+// Problem Statement: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
 // Time Complexity - O(n)
 // Space Complexity - O(n)
 
@@ -17,3 +19,5 @@ var lengthOfLongestSubstring = function(s) {
     }
     return result
 };
+
+// Post: https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/1364182/Javascript-easyandclean-solution
