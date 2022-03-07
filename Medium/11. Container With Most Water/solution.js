@@ -17,3 +17,5 @@ var maxArea = function(height) {
 	}
     return result;
 };
+
+// Post: https://leetcode.com/problems/container-with-most-water/discuss/1828075/JavaScript-92-Faster-Easy-Clean-solution
