@@ -1,1 +1,24 @@
-So, this question is similar to 2Sum
+Question Explained
+So, this question is similar to 2Sum but in this question we need to find tree numbers from array whose sum will result to zero.
+For eg -1, 1, 0 = -1 + 1 + 0 = 0.
+
+Solution appraoch
+So in this question we need to find three number and with a loop we can access one number at a time right?
+So we are sure that we cannot do this in single loop, what about two loops?
+With two nested loops we can access two array numbers at a time
+So in 2Sum question we wanted two numbers so we were looping over array one to find first number and for second number we were relying on HashMap.
+
+Understand this example for our current question
+a + b + c = 0
+5 + -7 + 2 = 0, this can be one example
+so if 5 and -7 are first two numbers, what will be the third ? compliment ( firstNum + secondNum ) ?
+right?
+
+if firstNum = 5, secondNum = -7 , sum = -2 , so thirdNum will surely be compliment of -2 i.e 2
+
+So this is just mu intial thinking, we will put all numebers of array into hashmap, loop over array twice(nested)
+and find if the compliment of 1stNum + 2ndNum exists in array or not.
+
+But, Time Complexity will be O(n^2) and space will be O(n) as we are using a HashMap to store n elements.
+Moreover in this question we can have duplicate elements. So our HashMap solution will not work out.
+
